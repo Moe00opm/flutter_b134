@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_b134/features/home/screens/home_screen.dart';
 import '../widgets/custom_button.dart';
 import '../utils/constants.dart';
-import 'package:flutter_b134/features/request_to_book/screens/request_to_book_screen.dart';
 
 class CreateNewPasswordScreen extends StatelessWidget {
   const CreateNewPasswordScreen({super.key});
@@ -24,9 +24,13 @@ class CreateNewPasswordScreen extends StatelessWidget {
           ),
           onPressed: () => Navigator.pop(context),
         ),
-        title: const Text('New Password',
-            style: TextStyle(
-                color: AppColors.primaryBlue, fontWeight: FontWeight.bold)),
+        title: const Text(
+          'New Password',
+          style: TextStyle(
+            color: AppColors.primaryBlue,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
         centerTitle: true,
       ),
       body: SafeArea(
@@ -35,11 +39,14 @@ class CreateNewPasswordScreen extends StatelessWidget {
           child: Column(
             children: [
               const SizedBox(height: 20),
-              const Text('Create New Password',
-                  style: TextStyle(
-                      fontSize: 32,
-                      fontWeight: FontWeight.bold,
-                      color: AppColors.textDark)),
+              const Text(
+                'Create New Password',
+                style: TextStyle(
+                  fontSize: 32,
+                  fontWeight: FontWeight.bold,
+                  color: AppColors.textDark,
+                ),
+              ),
               const SizedBox(height: 8),
               const Text(
                 'Your new password must be different from previous used passwords',
@@ -50,8 +57,7 @@ class CreateNewPasswordScreen extends StatelessWidget {
               const CircleAvatar(
                 radius: 60,
                 backgroundColor: AppColors.primaryBlue,
-                child:
-                Icon(Icons.lock_outline, size: 60, color: Colors.white),
+                child: Icon(Icons.lock_outline, size: 60, color: Colors.white),
               ),
               const SizedBox(height: 40),
               _buildPasswordField('New password', Icons.lock),
@@ -74,7 +80,8 @@ class CreateNewPasswordScreen extends StatelessWidget {
                     Navigator.pushAndRemoveUntil(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const RequestToBookScreen()),
+                        builder: (context) => const HomeScreen(),
+                      ),
                       (route) => false,
                     );
                   });
@@ -127,13 +134,15 @@ class CreateNewPasswordScreen extends StatelessWidget {
     return Row(
       children: [
         Icon(
-            isMet ? Icons.check_circle : Icons.circle_outlined,
-            size: 18,
-            color: isMet ? Colors.green : AppColors.textGrey),
+          isMet ? Icons.check_circle : Icons.circle_outlined,
+          size: 18,
+          color: isMet ? Colors.green : AppColors.textGrey,
+        ),
         const SizedBox(width: 8),
-        Text(text,
-            style: TextStyle(
-                color: isMet ? Colors.green : AppColors.textGrey)),
+        Text(
+          text,
+          style: TextStyle(color: isMet ? Colors.green : AppColors.textGrey),
+        ),
       ],
     );
   }

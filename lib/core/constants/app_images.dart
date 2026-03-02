@@ -9,13 +9,18 @@ abstract class AppImage {
   static const String eliinateGalian =
       'assets/images/eliinate_galian_hotel.png';
   static const String elysianSuites = 'assets/images/elysian_suites.png';
-  static const String jadeGem = 'assets/images/jade_gem.png';
+  static const String jadeGem = 'assets/images/jade_gem_resort.png';
   static const String lumierePalace = 'assets/images/lumière_palace.png';
   static const String mysticPalms = 'assets/images/mystic_palms.png';
-  static const String sapphire = 'assets/images/sapphire.png';
-  static const String serenitySands = 'assets/images/serenity_sands.png';
+  static const String serenitySands = 'assets/images/sernity_sands.png';
+  static const String sapphiroCoveHotel = 'assets/images/sapphire.png';
   static const String theAstonVill = 'assets/images/the_aston_vill_hotel.png';
   static const String tranquilShores = 'assets/images/tranquil_shores.png';
+  static const String maskGroup = 'assets/images/mask_group.png';
+  static const String mart = 'assets/images/mart.png';
+  static const String opalGroveInn = 'assets/images/opal_grove_inn.png';
+  static const String theHorizonRetreat =
+      'assets/images/the_horizon_retreat.png';
 
   static const String buildingSvg = 'assets/icons/buildingsvg.svg';
   static const String chatSvg = 'assets/icons/Chatsvg.svg';

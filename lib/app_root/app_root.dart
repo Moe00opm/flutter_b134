@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_b134/features/request_to_book/screens/request_to_book_screen.dart';
+import 'package:flutter_b134/features/auth/screens/splash_screen.dart';
 
 class GrandHotel extends StatelessWidget {
   const GrandHotel({super.key});
@@ -7,8 +7,14 @@ class GrandHotel extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      title: 'Grand Hotel',
       debugShowCheckedModeBanner: false,
-      home: RequestToBookScreen(),
+
+      theme: ThemeData(
+        fontFamily: 'Poppins',
+        scaffoldBackgroundColor: Colors.white,
+      ),
+      home: const SplashScreen(),
     );
   }
 }

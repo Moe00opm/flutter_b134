@@ -14,10 +14,7 @@ class OnboardingScreen extends StatelessWidget {
           Container(
             width: double.infinity,
             height: double.infinity,
-            child: Image.asset(
-              'images/vv.png',
-              fit: BoxFit.cover,
-            ),
+            child: Image.asset('assets/images/vv.png', fit: BoxFit.cover),
           ),
           Positioned(
             bottom: 0,
@@ -31,8 +28,13 @@ class OnboardingScreen extends StatelessWidget {
                   end: Alignment.bottomCenter,
                   colors: [
                     Colors.transparent,
-                    const Color.fromARGB(255, 69, 0, 188).withValues(alpha:0.5),
-                    const Color.fromARGB(255, 14, 1, 36).withValues(alpha:0.9),
+                    const Color.fromARGB(
+                      255,
+                      69,
+                      0,
+                      188,
+                    ).withValues(alpha: 0.5),
+                    const Color.fromARGB(255, 14, 1, 36).withValues(alpha: 0.9),
                     const Color(0xFF1C0040),
                   ],
                   stops: const [0.0, 0.2, 0.5, 1.0],
@@ -68,7 +70,9 @@ class OnboardingScreen extends StatelessWidget {
                       onPressed: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => const SignScreen()),
+                          MaterialPageRoute(
+                            builder: (context) => const SignScreen(),
+                          ),
                         );
                       },
                     ),
