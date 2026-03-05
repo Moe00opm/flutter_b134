@@ -37,4 +37,7 @@ abstract class AppImage {
   static const String locationIconSvg = "assets/icons/location_icon.svg";
   static const String masterCardIconSVg = "assets/icons/mastercard.svg";
   static const String visaIconSvg = "assets/icons/Visa.svg";
+
+  static const String filter = "assets/icons/Filter.svg";
+  static const String west = "assets/icons/west.svg";
 }

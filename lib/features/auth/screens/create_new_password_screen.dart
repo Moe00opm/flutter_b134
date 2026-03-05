@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_b134/features/home/screens/home_screen.dart';
+import 'package:flutter_b134/core/functions/navigations.dart';
+import 'package:flutter_b134/features/main/main_app.dart';
 import '../widgets/custom_button.dart';
 import '../utils/constants.dart';
 
@@ -77,13 +78,7 @@ class CreateNewPasswordScreen extends StatelessWidget {
                     ),
                   );
                   Future.delayed(const Duration(seconds: 1), () {
-                    Navigator.pushAndRemoveUntil(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const HomeScreen(),
-                      ),
-                      (route) => false,
-                    );
+                    pushTo(context, MainAppScreen());
                   });
                 },
               ),
