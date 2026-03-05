@@ -152,7 +152,7 @@ class _MyBookingPageState extends State<MyBookingPage> {
     );
   }
 
-  // Booked List - مطابق للصورة بالبيانات الصحيحة
+
   Widget _buildBookedList() {
     List<Map<String, dynamic>> bookedHotels = [
       {

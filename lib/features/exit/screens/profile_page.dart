@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'my_booking_page.dart';
 import 'message_page.dart';
-// import 'home_page.dart'; // أضف هذا إذا كان لديك ملف home_page.dart
+
 
 class ProfilePage extends StatefulWidget {
   const ProfilePage({super.key});
@@ -68,7 +68,6 @@ class _ProfilePageState extends State<ProfilePage> {
                     fit: BoxFit.cover,
                     errorBuilder: (context, error, stackTrace) {
                       return Container(
-                        color: Colors.grey[300],
                         child: const Icon(
                           Icons.person,
                           size: 50,
@@ -205,7 +204,7 @@ class _ProfilePageState extends State<ProfilePage> {
         color: Colors.white,
         boxShadow: [
           BoxShadow(
-            color: Colors.grey.withOpacity(0.2),
+            color: Colors.grey.withValues(alpha:0.2),
             blurRadius: 10,
             offset: const Offset(0, -2),
           ),
