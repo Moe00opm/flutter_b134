@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'message_page.dart';
 import 'my_booking_page.dart';
 import 'message_page.dart';
+// import 'home_page.dart'; // أضف هذا إذا كان لديك ملف home_page.dart
 
 class ProfilePage extends StatefulWidget {
   const ProfilePage({super.key});
@@ -69,7 +69,11 @@ class _ProfilePageState extends State<ProfilePage> {
                     errorBuilder: (context, error, stackTrace) {
                       return Container(
                         color: Colors.grey[300],
-                        child: const Icon(Icons.person, size: 50, color: Colors.grey),
+                        child: const Icon(
+                          Icons.person,
+                          size: 50,
+                          color: Colors.grey,
+                        ),
                       );
                     },
                   ),
@@ -80,20 +84,14 @@ class _ProfilePageState extends State<ProfilePage> {
               // Name
               const Text(
                 'Brooklyn Simmons',
-                style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                ),
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
               ),
               const SizedBox(height: 4),
 
               // Username
               const Text(
                 '@Broklynn',
-                style: TextStyle(
-                  fontSize: 14,
-                  color: Colors.grey,
-                ),
+                style: TextStyle(fontSize: 14, color: Colors.grey),
               ),
             ],
           ),
@@ -161,14 +159,12 @@ class _ProfilePageState extends State<ProfilePage> {
   }) {
     return ListTile(
       leading: Icon(icon, color: color),
-      title: Text(
-        label,
-        style: TextStyle(
-          fontSize: 16,
-          color: color,
-        ),
+      title: Text(label, style: TextStyle(fontSize: 16, color: color)),
+      trailing: const Icon(
+        Icons.arrow_forward_ios,
+        size: 16,
+        color: Colors.grey,
       ),
-      trailing: const Icon(Icons.arrow_forward_ios, size: 16, color: Colors.grey),
       onTap: onTap,
     );
   }
@@ -192,9 +188,7 @@ class _ProfilePageState extends State<ProfilePage> {
                 // Navigate to login or home
                 Navigator.pushReplacementNamed(context, '/');
               },
-              style: TextButton.styleFrom(
-                foregroundColor: Colors.red,
-              ),
+              style: TextButton.styleFrom(foregroundColor: Colors.red),
               child: const Text('Logout'),
             ),
           ],
@@ -203,7 +197,7 @@ class _ProfilePageState extends State<ProfilePage> {
     );
   }
 
-  // Bottom Navigation Bar مع أزرار التنقل
+  // Bottom Navigation Bar
   Widget _buildBottomNavigationBar() {
     return Container(
       height: 70,
@@ -230,10 +224,11 @@ class _ProfilePageState extends State<ProfilePage> {
               setState(() {
                 _selectedBottomNavIndex = 0;
               });
-              //Navigator.pushReplacement(
-                //context,
-                //MaterialPageRoute(builder: (context) => const HomePage()),
-              //);
+              // إذا كان لديك ملف HomePage، قم بإلغاء تعليق هذه الأسطر
+              // Navigator.pushReplacement(
+              //   context,
+              //   MaterialPageRoute(builder: (context) => const HomePage()),
+              // );
             },
           ),
 
@@ -289,7 +284,7 @@ class _ProfilePageState extends State<ProfilePage> {
     );
   }
 
-  // عنصر التنقل السفلي المخصص
+  // Bottom Navigation Item
   Widget _buildNavItem({
     required IconData icon,
     required IconData activeIcon,

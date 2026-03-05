@@ -15,7 +15,8 @@ class _MessagePageState extends State<MessagePage> {
     {
       'name': 'Miss Dolores Schowalter',
       'avatar': 'images/Images Details.png',
-      'lastMessage': 'Payment Method\nMaster Card\nVISA Visa\nAdd Debit Card\nConfirm and Pay\n19:27',
+      'lastMessage':
+          'Payment Method\nMaster Card\nVISA Visa\nAdd Debit Card\nConfirm and Pay\n19:27',
       'time': '19:27',
       'unread': 0,
       'isOnline': false,
@@ -27,12 +28,7 @@ class _MessagePageState extends State<MessagePage> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: _buildAppBar(),
-      body: Column(
-        children: [
-          _buildSearchBar(),
-          _buildChatList(),
-        ],
-      ),
+      body: Column(children: [_buildSearchBar(), _buildChatList()]),
       bottomNavigationBar: _buildBottomNavigationBar(),
     );
   }
@@ -161,10 +157,7 @@ class _MessagePageState extends State<MessagePage> {
                       ),
                       Text(
                         chat['time'],
-                        style: TextStyle(
-                          fontSize: 12,
-                          color: Colors.grey[600],
-                        ),
+                        style: TextStyle(fontSize: 12, color: Colors.grey[600]),
                       ),
                     ],
                   ),
@@ -213,7 +206,7 @@ class _MessagePageState extends State<MessagePage> {
               Navigator.pushReplacementNamed(context, '/my_booking');
               break;
             case 2:
-            // Already on Message
+              // Already on Message
               break;
             case 3:
               Navigator.pushReplacementNamed(context, '/profile');
