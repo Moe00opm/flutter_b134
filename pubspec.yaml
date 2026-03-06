@@ -37,6 +37,8 @@ dependencies:
 
   calendar_date_picker2: ^2.0.1
   flutter_svg: ^2.2.3
+  barcode_widget: ^2.0.4
+
 
 dev_dependencies:
   flutter_test:

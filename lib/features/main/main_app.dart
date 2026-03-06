@@ -3,6 +3,7 @@ import 'package:flutter_b134/core/constants/app_images.dart';
 import 'package:flutter_b134/core/styles/app_colors.dart';
 import 'package:flutter_b134/features/home/screens/home_screen.dart';
 import 'package:flutter_b134/features/account/pages/account_screen.dart';
+import 'package:flutter_b134/features/main/my_booking/page/my_booking_screen.dart';
 import 'package:flutter_b134/features/massage/page/message_screen.dart';
 import 'package:flutter_b134/features/massage/widgets/custom_svg.dart';
 
@@ -17,7 +18,7 @@ class _MainAppScreenState extends State<MainAppScreen> {
   int currentIndex = 0;
   List<Widget> screens = [
     HomeScreen(),
-    Center(child: Text('my booking')),
+    MyBookingScreen(),
     MessageScreen(),
     AccountScreen(),
   ];
